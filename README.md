@@ -1,3 +1,3 @@
 
 # Spy Supply
-Responsive project webpage
+Responsive webpage project
