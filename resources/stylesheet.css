@@ -1,7 +1,4 @@
-
-
 /* CSS SECRET AGENT SUPPLY */
-
 
 
 html, body {
@@ -83,6 +80,10 @@ header span {
 	margin-top: 2rem;
 }
 
+.hero-small {
+	display: none;
+}
+
 
 
 /* NAV BAR */
@@ -93,8 +94,12 @@ nav {
 	background-color: firebrick;
 }
 
-.nav-bar {
+.nav-bar-large {
 	width: 100%;
+}
+
+.nav-bar-medium {
+	display: none;
 }
 
 nav ul {
@@ -180,7 +185,7 @@ nav a {
 
 
 
-/* footer */
+/* FOOTER */
 
 
 
@@ -193,4 +198,142 @@ footer {
 .copyright {
 	display: flex;
 	align-content: center;
+}
+
+
+/* @media MEDIUM */
+
+
+@media only screen and (max-width: 1024px) {
+
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.hero-text {
+		margin-left: 2rem;
+	}
+
+	.nav-bar-large {
+		display: none;
+	}
+
+	.nav-bar-medium {
+		display: flex;
+		justify-content: center;
+		margin: 0.75rem auto;
+
+	}
+
+	.product-col {
+		flex-wrap: wrap;
+		width: 40%;
+		margin: auto
+	}
+
+	.store-details {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.location-col span, .hour-col span {
+		margin-left: 0;
+	}
+
+	.product-col.glasses {
+		display: none;
+	}
+
+	.copyright {
+		margin: 0 auto;
+	}
+
+}
+
+
+/* @media SMALL */
+
+
+@media only screen and (max-width: 504px) {
+
+	.container.flex {
+		justify-content: center;
+	}
+
+	header span {
+		display: none;
+	}
+
+	.hero {
+		display: none;
+	}
+
+	.hero-small {
+		display: flex;
+		height: 15rem;
+		background-image: url("images/moto.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.hero-image-small img{
+		height: 10rem;
+	}
+
+	.hero-text-small {
+		position: absolute;
+		top: 14rem;
+		height: auto;
+		background-color: black;
+		font-weight: bold;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.hero-text-small h1 {
+		font-size: 1rem;
+		margin-left: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.hero-text-small span {
+		display: block;
+		font-size: 0.77rem;
+		margin-left: 2rem;
+		margin-top: 1rem;
+		margin-bottom: .25rem;
+	}
+
+	.product-col.watch {
+		display: none;
+	}
+
+	.store-details {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.location-col {
+		margin-bottom: 2rem;
+	}
+
+	.location-col, .hour-col {
+		width: 90%;
+		text-align: center;
+	}
+
+	.product-col.pen {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.copyright {
+		margin: 0 auto;
+	}
+
 }
